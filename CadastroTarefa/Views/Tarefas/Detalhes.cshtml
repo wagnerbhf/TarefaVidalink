@@ -1,0 +1,42 @@
+﻿@model CadastroTarefa.Models.Tarefa
+
+@{
+    ViewBag.Title = "Detalhes";
+}
+
+<h2>Detalhes</h2>
+
+<div>
+   <h4>Tarefa</h4>
+   <hr />
+   <dl class="dl-horizontal">
+      <dt>
+         @Html.DisplayNameFor(model => model.Titulo)
+      </dt>
+
+      <dd>
+         @Html.DisplayFor(model => model.Titulo)
+      </dd>
+
+      <dt>
+         @Html.DisplayNameFor(model => model.Descricao)
+      </dt>
+
+      <dd>
+         @Html.DisplayFor(model => model.Descricao)
+      </dd>
+
+      <dt>
+         @Html.DisplayNameFor(model => model.DataExecucao)
+      </dt>
+
+      <dd>
+         @Html.DisplayFor(model => model.DataExecucao)
+      </dd>
+
+   </dl>
+</div>
+<p>
+   @Html.ActionLink("Editar", "Editar", new { id = Model.Id }) |
+   @Html.ActionLink("Voltar", "Index")
+</p>
